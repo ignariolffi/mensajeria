@@ -2,7 +2,9 @@
 
 	method howAreYou() = 'I am Wolloktastic!'
 
-	method hola() = 656
+	method hola() = 656 + 7069
+	
+	
 
 }
 
