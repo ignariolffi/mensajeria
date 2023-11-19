@@ -1,10 +1,22 @@
+import chats.*
+
 class Mensaje {
 
 	var emisor
 
+	method emisor() = emisor
+
 	method pesoContenido()
 
 	method peso() = 5 + self.pesoContenido() * 1.3
+
+	// PUNTO 2
+	method enviarA(chat) {
+		if (!chat.cumpleCond(self)) {
+			throw new DomainException(message = "No se pudo enviar el mensaje")
+		}
+		chat.agregarMensaje(self)
+	}
 
 }
 
